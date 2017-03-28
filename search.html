@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>search</title>
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css">
+
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .bs-docs-home
+        {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body class="bs-docs-home">
+
+<div class="container theme-showcase">
+    <h1 style=" line-height:2em;"> </h1><br />
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>搜索测试</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" name="form1">
+
+                        <div class="form-group">
+                            <label for="IDCard">我是搜索框</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="IDCard" name="IDCard" onkeydown="javascript:if(event.keyCode==13) search();" placeholder="商品名称">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" onClick="search();return false;">查询</button>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Subject">条件筛选</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="Subject" name="Subject" data="" placeholder="筛选" >
+
+                                <input type="text" class="form-control" id="price_select" name="Subject" data="" placeholder="价格" >
+                                <input type="text" class="form-control" id="sleeve_select" name="Subject" data="" placeholder="袖型" >
+                                <input type="text" class="form-control" id="crowd_select" name="Subject" data="" placeholder="人群" >
+
+                                <div class="input-group-btn">
+                                    <button type="button" id="SubjectName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" value="">商品筛选 <span class="caret"></span></button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#" onClick="$('#Subject').attr('data','');$('#SubjectName').html('商品筛选' + '<span class=\'caret\'>');"><strong>清空筛选项</strong></a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','price');$('#SubjectName').html('价格' + '<span class=\'caret\'>');">价格</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','sleeve');$('#SubjectName').html('袖型' + '<span class=\'caret\'>');">袖型</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','crowd');$('#SubjectName').html('人群' + '<span class=\'caret\'>');">人群</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','style');$('#SubjectName').html('风格' + '<span class=\'caret\'>');">风格</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','stereotypes');$('#SubjectName').html('版型' + '<span class=\'caret\'>');">版型</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','material');$('#SubjectName').html('主要材质' + '<span class=\'caret\'>');">主要材质</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','color');$('#SubjectName').html('颜色' + '<span class=\'caret\'>');">颜色</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','pattern');$('#SubjectName').html('图案' + '<span class=\'caret\'>');">图案</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','collar');$('#SubjectName').html('领型' + '<span class=\'caret\'>');">领型</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','launch');$('#SubjectName').html('上市时间' + '<span class=\'caret\'>');">上市时间</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','cloth');$('#SubjectName').html('布种' + '<span class=\'caret\'>');">布种</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','scene');$('#SubjectName').html('适用场景' + '<span class=\'caret\'>');">适用场景</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','size');$('#SubjectName').html('尺码' + '<span class=\'caret\'>');">尺码</a></li>
+                                        <li><a href="#" onClick="$('#Subject').attr('data','fashion');$('#SubjectName').html('流行元素' + '<span class=\'caret\'>');">流行元素</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>价格:&nbsp;&nbsp;&nbsp;</strong> 0-99 100-199 200-299 300-499 500以上<br />
+                        <strong>袖型:&nbsp;&nbsp;&nbsp;</strong> 长袖 短袖 七分袖 五分袖 无袖<br />
+                        <strong>人群:&nbsp;&nbsp;&nbsp;</strong> 青年 中年 青少年 老年 情侣装 大码人群<br />
+                        <strong>风格:&nbsp;&nbsp;&nbsp;</strong> 商务正装 商务休闲 青春休闲 欧美简约 日韩风格 英式学院 原创设计 嘻哈风格 军旅工装 朋克潮流 中国风 原生态 复古风<br />
+                        <strong>版型:&nbsp;&nbsp;&nbsp;</strong> 修身型 标准型（腰围=胸围） 宽松型（腰围>胸围）<br />
+                        <strong>主要材质:&nbsp;</strong> 蚕丝 麻 棉 涤纶 锦纶 莫代尔 醋纤 苎麻 大麻 粘胶纤维 榨蚕丝 氨纶<br />
+                        <strong>颜色:&nbsp;&nbsp;&nbsp;</strong> 红色 银色 蓝色 紫色 黑色 白色 金色 卡其色 灰色 绿色 黄色 米色 棕色 橙色 粉色<br />
+                        <strong>图案:&nbsp;&nbsp;&nbsp;</strong> 纯色 格纹 格子 条纹 3D印花 花卉 拼接 几何 字母 卡通 动物 人物 动物纹 豹纹 波点<br />
+                        <strong>领型:&nbsp;&nbsp;&nbsp;</strong> 翻领 立领 V领 方领 圆领 扣领尖领 高领 双层领 U型领 礼服领 连帽 尖领 可脱卸帽<br />
+                        <strong>上市时间:&nbsp;</strong> 2017春季 2017夏季 2017秋季 2017冬季 2016夏季 2016秋季 2016春季 2016冬季 2015春季 2015夏季 2015秋季 2015冬季 2014春季 2014夏季 2014秋季 2104冬季 往季<br />
+                        <strong>布种:&nbsp;&nbsp;&nbsp;</strong> 法兰绒（磨毛） 牛仔布 牛津 纺印花布 色织布 提花布 色丁布 绸缎 亚麻布 真丝 莫代尔 LYCRA莱卡 冰丝 欧根纱<br />
+                        <strong>适用场景:&nbsp;</strong> 上班 旅游 居家 雨天 运动 宴会 沙滩 婚礼 舞蹈 休闲<br />
+                        <strong>尺码:&nbsp;&nbsp;&nbsp;</strong> XS S M L XL XXL XXXL 165/80A 170/84A 175/88A 180/92A 185/96A 190/100A 160/84B 165/88B 170/92B 175/95B 180/100B 185/104B 190/108B 均码 加肥加大<br />
+                        <strong>流行元素:&nbsp;</strong> 简约 刺绣 镂空 图腾 明星款 拼接 拼色 编织 水钻 亮片 拉链装饰 渐变 钩花 车缝线 铆钉 复古 磨破 网状 串珠 褶皱 金属装饰 皮革拼接 蕾丝 多口袋 徽章 蜡染
+                    </div>
+
+                    <div class="table-responsive">
+                        <table id="SubjectTable" border="0" cellspacing="0" cellpadding="0" class="table">
+                            <tr class=" label-primary">
+                                <th scope="col" width="50%" ><span style="color:white">商品名称</span></th>
+                                <th scope="col"><span style="color:white">店铺</span></th>
+                                <th scope="col"><span style="color:white">分类</span></th>
+                            </tr>
+                            <!--<tr class="active">
+                                <td>蓝匙（帛泽）男士纯色短袖衬衫 天蓝色bDXTR08 天蓝色 39</td>
+                                <td>蓝匙</td>
+                                <td>衬衫</td>
+                            </tr>-->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+</body>
+
+<script type="text/javascript">
+    function search() {
+        var sValue = $("#IDCard").val();
+        var optValue = $("#Subject").val();
+        var optData = $("#Subject").attr("data");
+
+        console.log(sValue + ":" + optValue + ":" + optData);
+        $.post(
+                "search",
+                {
+                    sValue : sValue,
+                    optValue : optValue,
+                    optData : optData
+                },
+                function(result) {
+                    console.log(result);
+                    if (result.length > 0) {
+                        var trs = $("tr.active");
+                        if (trs.length > 0) {
+                            for (var i = 0; i < trs.length; i++) {
+                                $(trs[i]).remove();
+                            }
+                        }
+                    }
+                    var resArray = $.parseJSON(result);
+                    for (var i in resArray) {
+                        var obj = resArray[i];
+                        console.log(obj.warename);
+                        var html = "<tr class='active'>" +
+                                "<td>" + obj.warename + "</td>" +
+                                "<td>" + obj.shop_name + "</td>" +
+                                "<td>" + obj.catname + "</td>"
+                                + "</tr>";
+                        $("#SubjectTable").append(html);
+                    }
+                }
+        );
+    }
+</script>
+</html>
