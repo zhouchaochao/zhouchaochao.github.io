@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>search</title>
+    <title>衬衫 男装 服饰内衣 【行情 价格 评价 正品行货】-京东</title>
 
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css">
@@ -23,6 +23,14 @@
         {
             background-color: #ccc;
         }
+        .filterConditionLable
+        {
+            width: 6%;
+        }
+        .filterConditionSelect
+        {
+            width: 92%;
+        }
     </style>
 </head>
 
@@ -37,7 +45,7 @@
         <div class="col-sm-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>搜索测试</strong></h3>
+                    <h3 class="panel-title"><strong><a onclick="alert('abc');">搜索测试</a></strong></h3>
                 </div>
                 <div class="panel-body">
                     <form role="form" name="form1">
@@ -52,15 +60,271 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <label>条件筛选</label>
+                        <div style="width: 1100px;">
+                            <div class="form-group">
+                                <label class="filterConditionLable">价格</label><b>:</b>
+                                <select id="price" class="filterConditionSelect" multiple="multiple">
+                                    <option value="0-99">0-99</option>
+                                    <option value="100-199">100-199</option>
+                                    <option value="200-299">200-299</option>
+                                    <option value="300-499">300-499</option>
+                                    <option value="500">500以上</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="filterConditionLable">袖型</label><b>:</b>
+                                <select id="sleeve" class="filterConditionSelect" multiple="multiple">
+                                    <option value="长袖">长袖</option>
+                                    <option value="短袖">短袖</option>
+                                    <option value="七分袖">七分袖</option>
+                                    <option value="五分袖">五分袖</option>
+                                    <option value="无袖">无袖</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="filterConditionLable">人群</label><b>:</b>
+                                <select id="crowd" class="filterConditionSelect" multiple="multiple">
+                                    <option value="青年">青年</option>
+                                    <option value="中年">中年</option>
+                                    <option value="青少年">青少年</option>
+                                    <option value="老年">老年</option>
+                                    <option value="情侣装">情侣装</option>
+                                    <option value="大码人群">大码人群</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">风格</label><b>:</b>
+                                <select id="style" class="filterConditionSelect" multiple="multiple">
+                                    <option value="商务正装">商务正装</option>
+                                    <option value="商务休闲">商务休闲</option>
+                                    <option value="青春休闲">青春休闲</option>
+                                    <option value="欧美简约">欧美简约</option>
+                                    <option value="日韩风格">日韩风格</option>
+                                    <option value="英式学院">英式学院</option>
+                                    <option value="原创设计">原创设计</option>
+                                    <option value="嘻哈风格">嘻哈风格</option>
+                                    <option value="军旅工装">军旅工装</option>
+                                    <option value="朋克潮流">朋克潮流</option>
+                                    <option value="中国风">中国风</option>
+                                    <option value="原生态">原生态</option>
+                                    <option value="复古风">复古风</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">版型</label><b>:</b>
+                                <select id="stereotypes" class="filterConditionSelect" multiple="multiple">
+                                    <option value="修身型">修身型</option>
+                                    <option value="标准型（腰围=胸围）">标准型（腰围=胸围）</option>
+                                    <option value="宽松型（腰围>胸围）">宽松型（腰围>胸围）</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">主要材质</label><b>:</b>
+                                <select id="material" class="filterConditionSelect" multiple="multiple">
+                                    <option value="蚕丝">蚕丝</option>
+                                    <option value="麻">麻</option>
+                                    <option value="棉">棉</option>
+                                    <option value="涤纶">涤纶</option>
+                                    <option value="锦纶">锦纶</option>
+                                    <option value="莫代尔">莫代尔</option>
+                                    <option value="醋纤">醋纤</option>
+                                    <option value="苎麻">苎麻</option>
+                                    <option value="大麻">大麻</option>
+                                    <option value="粘胶纤维">粘胶纤维</option>
+                                    <option value="榨蚕丝">榨蚕丝</option>
+                                    <option value="氨纶">氨纶</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">颜色</label><b>:</b>
+                                <select id="color" class="filterConditionSelect" multiple="multiple">
+                                    <option value="红色">红色</option>
+                                    <option value="银色">银色</option>
+                                    <option value="蓝色">蓝色</option>
+                                    <option value="紫色">紫色</option>
+                                    <option value="黑色">黑色</option>
+                                    <option value="白色">白色</option>
+                                    <option value="金色">金色</option>
+                                    <option value="卡其色">卡其色</option>
+                                    <option value="灰色">灰色</option>
+                                    <option value="绿色">绿色</option>
+                                    <option value="黄色">黄色</option>
+                                    <option value="米色">米色</option>
+                                    <option value="棕色">棕色</option>
+                                    <option value="橙色">橙色</option>
+                                    <option value="粉色">粉色</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">图案</label><b>:</b>
+                                <select id="pattern" class="filterConditionSelect" multiple="multiple">
+                                    <option value="纯色">纯色</option>
+                                    <option value="格纹">格纹</option>
+                                    <option value="格子">格子</option>
+                                    <option value="条纹">条纹</option>
+                                    <option value="3D印花">3D印花</option>
+                                    <option value="花卉">花卉</option>
+                                    <option value="拼接">拼接</option>
+                                    <option value="几何">几何</option>
+                                    <option value="字母">字母</option>
+                                    <option value="卡通">卡通</option>
+                                    <option value="动物">动物</option>
+                                    <option value="人物">人物</option>
+                                    <option value="动物纹">动物纹</option>
+                                    <option value="豹纹">豹纹</option>
+                                    <option value="波点">波点</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">领型</label><b>:</b>
+                                <select id="collar" class="filterConditionSelect" multiple="multiple">
+                                    <option value="翻领">翻领</option>
+                                    <option value="立领">立领</option>
+                                    <option value="V领">V领</option>
+                                    <option value="方领">方领</option>
+                                    <option value="圆领">圆领</option>
+                                    <option value="扣领尖领">扣领尖领</option>
+                                    <option value="高领">高领</option>
+                                    <option value="双层领">双层领</option>
+                                    <option value="U型领">U型领</option>
+                                    <option value="礼服领">礼服领</option>
+                                    <option value="连帽">连帽</option>
+                                    <option value="尖领">尖领</option>
+                                    <option value="可脱卸帽">可脱卸帽</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">上市时间</label><b>:</b>
+                                <select id="launch" class="filterConditionSelect" multiple="multiple">
+                                    <option value="2017春季">2017春季</option>
+                                    <option value="2017夏季">2017夏季</option>
+                                    <option value="2017秋季">2017秋季</option>
+                                    <option value="2017冬季">2017冬季</option>
+                                    <option value="2016夏季">2016夏季</option>
+                                    <option value="2016秋季">2016秋季</option>
+                                    <option value="2016春季">2016春季</option>
+                                    <option value="2016冬季">2016冬季</option>
+                                    <option value="2015春季">2015春季</option>
+                                    <option value="2015夏季">2015夏季</option>
+                                    <option value="2015秋季">2015秋季</option>
+                                    <option value="2015冬季">2015冬季</option>
+                                    <option value="2014春季">2014春季</option>
+                                    <option value="2014夏季">2014夏季</option>
+                                    <option value="2014秋季">2014秋季</option>
+                                    <option value="2104冬季">2104冬季</option>
+                                    <option value="往季">往季</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">布种</label><b>:</b>
+                                <select id="cloth" class="filterConditionSelect" multiple="multiple">
+                                    <option value="法兰绒（磨毛）">法兰绒（磨毛）</option>
+                                    <option value="牛仔布">牛仔布</option>
+                                    <option value="牛津">牛津</option>
+                                    <option value="纺印花布">纺印花布</option>
+                                    <option value="色织布">色织布</option>
+                                    <option value="提花布">提花布</option>
+                                    <option value="色丁布">色丁布</option>
+                                    <option value="绸缎">绸缎</option>
+                                    <option value="亚麻布">亚麻布</option>
+                                    <option value="真丝">真丝</option>
+                                    <option value="莫代尔">莫代尔</option>
+                                    <option value="LYCRA莱卡">LYCRA莱卡</option>
+                                    <option value="冰丝">冰丝</option>
+                                    <option value="欧根纱">欧根纱</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">适用场景</label><b>:</b>
+                                <select id="scene" class="filterConditionSelect" multiple="multiple">
+                                    <option value="上班">上班</option>
+                                    <option value="旅游">旅游</option>
+                                    <option value="居家">居家</option>
+                                    <option value="雨天">雨天</option>
+                                    <option value="运动">运动</option>
+                                    <option value="宴会">宴会</option>
+                                    <option value="沙滩">沙滩</option>
+                                    <option value="婚礼">婚礼</option>
+                                    <option value="舞蹈">舞蹈</option>
+                                    <option value="休闲">休闲</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="filterConditionLable">尺码</label><b>:</b>
+                                <select id="size" class="filterConditionSelect" multiple="multiple">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                    <option value="XXXL">XXXL</option>
+                                    <option value="165/80A">165/80A</option>
+                                    <option value="170/84A">170/84A</option>
+                                    <option value="175/88A">175/88A</option>
+                                    <option value="180/92A">180/92A</option>
+                                    <option value="185/96A">185/96A</option>
+                                    <option value="190/100A">190/100A</option>
+                                    <option value="160/84B">160/84B</option>
+                                    <option value="165/88B">165/88B</option>
+                                    <option value="170/92B">170/92B</option>
+                                    <option value="175/95B">175/95B</option>
+                                    <option value="180/100B">180/100B</option>
+                                    <option value="185/104B">185/104B</option>
+                                    <option value="190/108B">190/108B</option>
+                                    <option value="均码">均码</option>
+                                    <option value="加肥加大">加肥加大</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="filterConditionLable">流行元素</label><b>:</b>
+                                <select id="fashion" class="filterConditionSelect" multiple="multiple">
+                                    <option value="简约">简约</option>
+                                    <option value="刺绣">刺绣</option>
+                                    <option value="镂空">镂空</option>
+                                    <option value="图腾">图腾</option>
+                                    <option value="明星款">明星款</option>
+                                    <option value="拼接">拼接</option>
+                                    <option value="拼色">拼色</option>
+                                    <option value="编织">编织</option>
+                                    <option value="水钻">水钻</option>
+                                    <option value="亮片">亮片</option>
+                                    <option value="拉链装饰">拉链装饰</option>
+                                    <option value="渐变">渐变</option>
+                                    <option value="钩花">钩花</option>
+                                    <option value="车缝线">车缝线</option>
+                                    <option value="铆钉">铆钉</option>
+                                    <option value="复古">复古</option>
+                                    <option value="磨破">磨破</option>
+                                    <option value="网状">网状</option>
+                                    <option value="串珠">串珠</option>
+                                    <option value="褶皱">褶皱</option>
+                                    <option value="金属装饰">金属装饰</option>
+                                    <option value="皮革拼接">皮革拼接</option>
+                                    <option value="蕾丝">蕾丝</option>
+                                    <option value="多口袋">多口袋</option>
+                                    <option value="徽章">徽章</option>
+                                    <option value="蜡染">蜡染</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!--<div class="form-group">
                             <label for="Subject">条件筛选</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="Subject" name="Subject" data="" placeholder="筛选" >
-
-                                <input type="text" class="form-control" id="price_select" name="Subject" data="" placeholder="价格" >
-                                <input type="text" class="form-control" id="sleeve_select" name="Subject" data="" placeholder="袖型" >
-                                <input type="text" class="form-control" id="crowd_select" name="Subject" data="" placeholder="人群" >
-
                                 <div class="input-group-btn">
                                     <button type="button" id="SubjectName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" value="">商品筛选 <span class="caret"></span></button>
                                     <ul class="dropdown-menu pull-right">
@@ -82,7 +346,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+
                     </form>
 
                     <div class="alert alert-danger alert-dismissable">
@@ -127,21 +392,46 @@
 
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<!--<link rel="stylesheet" href="/plugins/select2/select2.min.css"  type="text/css" />-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<!--<script src="/plugins/select2/select2.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 </body>
 
 <script type="text/javascript">
-    function search() {
-        var sValue = $("#IDCard").val();
-        var optValue = $("#Subject").val();
-        var optData = $("#Subject").attr("data");
 
-        console.log(sValue + ":" + optValue + ":" + optData);
+    $(document).ready(function() {
+        $(".filterConditionSelect").select2();
+    });
+
+    function search() {
+        var arr = $(".filterConditionSelect");
+        var json_str = '{';
+        for(var i=0;i < arr.length; i++) {
+            var type = arr[i].getAttribute("id");
+            var value = $("#"+type).val();
+            if (value != null) {
+                if(json_str != '{'){
+                    json_str += ',';
+                }
+                json_str += ('"' + type + '":"' + value + '"');
+            }
+        }
+        json_str += '}';
+        console.log(json_str);
+
+        var sValue = $("#IDCard").val();
+        /*        var optValue = $("#Subject").val();
+         var optData = $("#Subject").attr("data");*/
+
+        //console.log(sValue + ":" + optValue + ":" + optData);
         $.post(
                 "search",
                 {
                     sValue : sValue,
-                    optValue : optValue,
-                    optData : optData
+                    /*                    optValue : optValue,
+                     optData : optData,*/
+                    jsonStr:json_str
                 },
                 function(result) {
                     console.log(result);
@@ -158,7 +448,7 @@
                         var obj = resArray[i];
                         console.log(obj.warename);
                         var html = "<tr class='active'>" +
-                                "<td>" + obj.warename + "</td>" +
+                                "<td><a onclick=\"alert('" + obj.appendDocContent + "')\">" + obj.warename + "</a></td>" +
                                 "<td>" + obj.shop_name + "</td>" +
                                 "<td>" + obj.catname + "</td>"
                                 + "</tr>";
@@ -167,5 +457,14 @@
                 }
         );
     }
+
+    function testJsonTranslate(obj){
+        var a={"name":"tom","sex":"男","age":"24"};
+        var b='{"name":"Mike","sex":"女","age":"29"}';
+        console.log("aa:" + a);
+        console.log("aaa:" + JSON.stringify(a));
+        console.log("b" + JSON.parse(b));
+    }
+
 </script>
 </html>
